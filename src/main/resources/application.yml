@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: spring-webflux-api-client
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+
+api:
+  endpoint: http://localhost:8980/api/v2/products/
+
+server:
+  port: 8990
+  servlet:
+    context-path: /springwebfluxclient
+  errorResponse:
+    include-message: always
+    inlucde-binding-errors: always
+
+logging:
+  level:
+    com.pragma: DEBUG
